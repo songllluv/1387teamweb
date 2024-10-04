@@ -41,9 +41,24 @@
         </div>
         <br>
         <div class = "backgroundiv">
-            <div class = "norcal">
+            <div class = "norcal" id = "scr">
                <h1><code> Loading...... </code></h1>
             </div>
         </div>
+        <script>
+    function getWebsiteBody(url, callback) {
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', url, true);
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                  callback(xhr.responseText);
+            }
+          };
+          xhr.send();
+    }
+    getWebsiteBody('https://name317.github.io/cal/tet/' + x + '.txt', function(body) {
+          document.getElementbyId('scr').innerText = normal;
+    });
+        </script>
     </body>
 </html>
