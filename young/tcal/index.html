@@ -1,9 +1,9 @@
 <html>
     <head>
         <meta charset = "UTF-8">
-        <title>1387网-Young-公告-查看</title>
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests;">
-        <link href="favicon.ico" rel="icon" />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests;">
+        <title>1387网-公告</title>
+        <link href="favicon.ico" rel="icon">
         <style>
             .backgroundiv {
               background-color: #3498db;
@@ -13,7 +13,7 @@
               margin: 20px;
               text-align: center;
             }
-            a {
+            a{
               text-decoration: none;
             }
             a:hover {
@@ -21,13 +21,13 @@
 	    	}
             code{
               background-color: white;
-              color: #818b98;
+              color: #818ba0;
             }
             .norcal{
               background-color: white;
               color: black;
               padding: 5px;
-              border: 3px solid black;
+              border: 2px solid black;
               margin: 5px;
             }
         </style> 
@@ -42,32 +42,10 @@
         </div>
         <br>
         <div class = "backgroundiv">
-	    <div class = "norcal" id = "sct">
-		<h1><code>Loading Title......</code></h1>
-	    </div>
-            <div class = "norcal" id = "scr">
-               <h1><code> Loading Texts...... </code></h1>
+            <div class = "norcal">
+               <h2><a href = "https://name317.github.io/1387teamweb/cal/tet?doc=1">young有网站了！</a>&ensp;&ensp;&ensp;&ensp;&ensp;<code>#001</code></h2>
+                <p>young有网站了！！！</p>
             </div>
         </div>
-        <script>
-    const url = new URL(window.location.href);
-	const x = url.searchParams.get('doc');
-    function getWebsiteBody(url, callback) {
-          var xhr = new XMLHttpRequest();
-          xhr.open('GET', url, true);
-          xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                  callback(xhr.responseText);
-            }
-          };
-          xhr.send();
-    }
-    getWebsiteBody('https://name317.github.io/1387teamweb/young/tcal/tet/' + x + 'd.txt', function(body) {
-          document.getElementById('scr').innerText = body;
-    });
-    getWebsiteBody('https://name317.github.io/1387teamweb/young/tcal/tet/' + x + 't.txt', function(body) {
-          document.getElementById('sct').innerHTML = '<h1>' + body + '</h1>';
-    });
-        </script>
     </body>
 </html>
