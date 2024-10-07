@@ -16,14 +16,14 @@
             a{
               text-decoration: none;
             }
-	    	div{
+	    	.divdiv{
               background-color: #ffffff;
               color: black;
               padding: 5px;
               border: 2px solid black;
               margin: 5px;
             }
-			div:hover{
+			.divdiv:hover{
               background-color: #eeeeee;
               color: black;
               padding: 5px;
@@ -81,6 +81,7 @@
 			function app(nero){
 				var parentDiv = document.getElementById('motu');
 				var newDiv = document.createElement('div');
+				newDiv.className = 'divdiv';
 				newDiv.innerHTML = nero;
 				parentDiv.appendChild(newDiv);
 			}
