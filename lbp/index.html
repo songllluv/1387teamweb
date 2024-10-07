@@ -27,7 +27,7 @@
             <hr>
         </div>
         <br>
-        <div class = "backgroundiv">
+        <div class = "backgroundiv" id = motu>
               <h1>犇犇</h1>
         </div>
         <script>
@@ -64,6 +64,12 @@
 				    return(xhr.statusText);
 				}
    			};
+			function app(nero){
+				var parentDiv = document.getElementById('motu');
+				var newDiv = document.createElement('div');
+				newDiv.innerHTML = nero;
+				parentDiv.appendChild(newDiv);
+			}
         </script>
     </body>
 </html>
