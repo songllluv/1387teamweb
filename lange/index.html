@@ -1,5 +1,5 @@
 <html>
-    <head>
+	<head>
         <meta charset = "UTF-8">
         <title>1387网-登录</title>
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests;">
@@ -76,16 +76,23 @@
             function bus(){
                 var nad = document.getElementById("name").value;
                 var dod = document.getElementById("pass").value;
-				var d1 = JSON.parse(pt('get',nad + '_password'));
-				var d2 = d1[nad + '_password'];
-				if (d2 == dod){
-					alert('登陆成功！');
-					window.localStorage.setItem('nowname',nad);
+                var d = JSON.parse(pt('get',nad + '_password'));
+                var d0 = d[nad + '_password'];
+				if (d2 === 'null'){
+					alert('有这个号了！');
 				}
 				else{
-					alert('登陆失败！');
+                    var d1 = JSON.parse(pt('update',nad + '_password',dod));
+				    var d2 = d1['status'];
+                    if (d2 === 'success'){
+                        alert('注册成功！请记住' + nad + '的密码：' + dod);
+                        window.localStorage.setItem('nowname',nad);
+                    }
+					else{
+                        alert('注册失败！');
+                    }
 				}
-				window.location.href = 'https://name317.github.io/1387teamweb/';
+                window.location.href = 'https://name317.github.io/1387teamweb';
             }
         </script>
     </body>
