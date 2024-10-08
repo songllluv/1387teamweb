@@ -76,6 +76,14 @@
             function bus(){
                 var nad = document.getElementById("name");
                 var dod = document.getElementById("pass");
+				var d1 = pt('get','nad' + '_password');
+				var d2 = d1['nad' + '_password'];
+				if (d2 == dod){
+					alert('登陆成功！');
+				}
+				else{
+					alert('登陆失败！');
+				}
             }
         </script>
     </body>
