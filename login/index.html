@@ -76,7 +76,7 @@
             function bus(){
                 var nad = document.getElementById("name").value;
                 var dod = document.getElementById("pass").value;
-				var d1 = pt('get',nad + '_password');
+				var d1 = JSON.parse(pt('get',nad + '_password'));
 				var d2 = d1[nad + '_password'];
 				if (d2 == dod){
 					alert('登陆成功！');
