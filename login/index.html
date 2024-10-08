@@ -37,7 +37,7 @@
             <input type = 'input' id = 'pass' placeholder = '密码'></input>
             <br>
             <br>
-            <button onclick = 'bus'>登录</button>&ensp;&ensp;&ensp;<a href = 'https://name317.github.io/1387teamweb/lange'>没有账号？去注册</a>
+            <button onclick = 'bus();'>登录</button>&ensp;&ensp;&ensp;<a href = 'https://name317.github.io/1387teamweb/lange'>没有账号？去注册</a>
         </div>
         <script>
             function apt(tin,wm){
@@ -80,6 +80,7 @@
 				var d2 = d1[nad + '_password'];
 				if (d2 == dod){
 					alert('登陆成功！');
+					window.localStorage.setItem('nowname',nad);
 				}
 				else{
 					alert('登陆失败！');
