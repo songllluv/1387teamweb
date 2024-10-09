@@ -91,19 +91,30 @@
 				    return(xhr.statusText);
 				}
    			};
+			var dodo = JSON.parse(pt('get','counter'));
+			var dode = dodo['counter'];
+			if (dode === 'null'){
+				pt('update','counter','0');
+			}
             function bus(){
                 var nad = document.getElementById("name").value;
                 var dod = document.getElementById("pass").value;
                 var d = JSON.parse(pt('get',nad + '_password'));
                 var d0 = d[nad + '_password'];
+				var dodot = JSON.parse(pt('get','counter'));
+				var dodet = Number(dodo['counter']) + 1;
 				if (d2 === 'null'){
 					alert('有这个号了！');
 				}
 				else{
                     var d1 = JSON.parse(pt('update',nad + '_password',dod));
 				    var d2 = d1['status'];
-                    if (d2 === 'success'){
-                        alert('注册成功！请记住' + nad + '的密码：' + dod);
+					var d3 = JSON.parse(pt('update',nad + '_id',String(dodet)));
+				    var d4 = d3['status'];
+					var d5 = JSON.parse(pt('update','counter',String(dodet)));
+				    var d6 = d5['status'];
+                    if (d2 === 'success' && d4 == 'success' && d6 === 'success'){
+                        alert('注册成功！请记住' + nad + '的密码：' + dod + '，他的ID号是：' + String(dodet));
                         window.localStorage.setItem('nowname',nad);
                     }
 					else{
