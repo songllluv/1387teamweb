@@ -58,6 +58,7 @@
         <br>
         <div class = "backgroundiv" id = motu>
               <h1>犇犇</h1>
+			  <h4>超过50条的消息会被删除！</h4>
         </div>
         <script>
             function apt(tin,wm){
@@ -101,6 +102,29 @@
 				parentDiv.appendChild(newDiv);
 			}
 			app('测试 test');
+			function dob(){
+				var cnd0 = pt('get','speak_counter');
+				var cnd = cnd0['speak_counter'];
+				if (cnd == 'null'){
+					pt('update','speak_counter','0');
+					cnd = 0;
+				}
+				var up0 = pt('get','speak_upel');
+				var up = cnd0['speak_upel'];
+				if (up == 'null'){
+					pt('update','speak_upel','0');
+					up = 0;
+				} 
+				for (int i = up;i <= up - cnd + 1;i++){
+					var dd0 = pt('get','speak_user_' + String(i));
+					var dd = dd0['speak_user_' + String(i)];
+					var d0 = pt('get','speak_thing_' + String(i));
+					var d = dd0['speak_thing_' + String(i)];
+					app(dd + ' : ' + d);
+					console.log(dd + ' ' + d);
+				}
+			}
+			dob();
         </script>
     </body>
 </html>
