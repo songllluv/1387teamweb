@@ -101,7 +101,6 @@
 				newDiv.innerHTML = nero;
 				parentDiv.appendChild(newDiv);
 			}
-			app('测试 test');
 			function dob(){
 				var cnd0 = pt('get','speak_counter');
 				var cnd = cnd0['speak_counter'];
@@ -111,11 +110,15 @@
 				}
 				var up0 = pt('get','speak_upel');
 				var up = cnd0['speak_upel'];
+				console.log(up0);
+				console.log(up);
+				console.log(cnd0);
+				console.log(cnd);
 				if (up == 'null'){
 					pt('update','speak_upel','0');
 					up = 0;
 				} 
-				for (int i = up;i <= up - cnd + 1;i++){
+				for (var i = up;i <= up - cnd + 1;i++){
 					var dd0 = pt('get','speak_user_' + String(i));
 					var dd = dd0['speak_user_' + String(i)];
 					var d0 = pt('get','speak_thing_' + String(i));
@@ -124,6 +127,7 @@
 					console.log(dd + ' ' + d);
 				}
 			}
+			app('测试 test');
 			dob();
         </script>
     </body>
