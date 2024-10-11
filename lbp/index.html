@@ -60,6 +60,9 @@
               <h1>犇犇</h1>
 			  <h4>超过50条的消息会被删除！</h4>
         </div>
+		<div class = "backgroundiv">
+              <span><input id = 'cinn'></input>&ensp;&ensp;&ensp;<button onclick = 'simple()'>发送</button></span>
+        </div>
         <script>
             function apt(tin,wm){
 			    return '&' + tin + '=' + wm;
@@ -102,13 +105,13 @@
 				parentDiv.appendChild(newDiv);
 			}
 			function dob(){
-				var cnd0 = pt('get','speak_counter');
+				var cnd0 = JSON.parse(pt('get','speak_counter'));
 				var cnd = cnd0['speak_counter'];
 				if (cnd == 'null'){
 					pt('update','speak_counter','0');
 					cnd = 0;
 				}
-				var up0 = pt('get','speak_upel');
+				var up0 = JSON.parse(pt('get','speak_upel'));
 				var up = cnd0['speak_upel'];
 				console.log(up0);
 				console.log(up);
@@ -126,6 +129,9 @@
 					app(dd + ' : ' + d);
 					console.log(dd + ' ' + d);
 				}
+			}
+			function simple(){
+				console.log('发送');
 			}
 			app('测试 test');
 			dob();
