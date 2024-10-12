@@ -121,7 +121,7 @@
 					pt('update','speak_upel','0');
 					up = 0;
 				} 
-				for (var i = up;i <= up - cnd + 1;i++){
+				for (var i = up;i >= up - cnd + 1;i--){
 					var dd0 = pt('get','speak_user_' + String(i));
 					var dd = dd0['speak_user_' + String(i)];
 					var d0 = pt('get','speak_thing_' + String(i));
