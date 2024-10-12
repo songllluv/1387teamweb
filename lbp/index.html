@@ -151,7 +151,7 @@
 				up++;
 				pt('update','speak_upel',String(up));
 				pt('update','speak_user_' + String(up),window.localStorage.getItem('nowname'));
-				pt('update','speak_thing_ + String(up)',dv);
+				pt('update','speak_thing_' + String(up),dv);
 				console.log('发送 : ' + dv);
 				location.reload();
 			}
