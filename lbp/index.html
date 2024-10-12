@@ -113,14 +113,14 @@
 				}
 				var up0 = JSON.parse(pt('get','speak_upel'));
 				var up = up0['speak_upel'];
+				if (up == 'null'){
+					pt('update','speak_upel','0');
+					up = 0;
+				}
 				console.log(up0);
 				console.log(up);
 				console.log(cnd0);
 				console.log(cnd);
-				if (up == 'null'){
-					pt('update','speak_upel','0');
-					up = 0;
-				} 
 				for (var i = up;i >= up - cnd + 1;i--){
 					var dd0 = JSON.parse(pt('get','speak_user_' + String(i)));
 					var dd = dd0['speak_user_' + String(i)];
@@ -131,9 +131,30 @@
 				}
 			}
 			function simple(){
-				console.log('发送');
+				var dv = getElementById('cinn').value;
+				var cnd0 = JSON.parse(pt('get','speak_counter'));
+				var cnd = cnd0['speak_counter'];
+				if (cnd == 'null'){
+					pt('update','speak_counter','0');
+					cnd = 0;
+				}
+				var up0 = JSON.parse(pt('get','speak_upel'));
+				var up = up0['speak_upel'];
+				if (up == 'null'){
+					pt('update','speak_upel','0');
+					up = 0;
+				}
+				if (cnd < 50){
+					cnd++;
+					pt('update','speak_counter',String(cnd));
+				}
+				up++;
+				pt('update','speak_upel',String(up));
+				pt('update','speak_user_' + String(up),window.localStorage.getItem('nowname'));
+				pt('update','speak_thing_ + String(up)',dv);
+				console.log('发送 : ' + dv);
+				location.reload();
 			}
-			app('测试 test');
 			dob();
         </script>
     </body>
