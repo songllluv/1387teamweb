@@ -31,6 +31,7 @@
             <h2>1387社欢迎你！</h2>
         </div>
         <script>
+            document.getElementById('blogin').disabled = true;
             function dete(){
                 window.localStorage.setItem('nowname','null');
                 location.reload();
@@ -41,6 +42,7 @@
             }
             else{
                 document.querySelector('strong.dename').textContent = dy;
+                document.getElementById('blogin').disabled = false;
             }
         </script>
     </body>
