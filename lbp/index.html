@@ -64,10 +64,10 @@
         <br>
         <div class = "backgroundiv" id = motu>
               <h1>犇犇</h1>
-			  <h4>超过50条的消息会被删除！</h4>
+			  <h4>超过20条的消息会被删除！</h4>
         </div>
 		<div class = "backgroundiv">
-              <span><input id = 'cinn' placeholder = '输入你的犇犇' weight = 80%></input>&ensp;&ensp;&ensp;<button onclick = 'simple()'>发送</button></span>
+              <span><input id = 'cinn' placeholder = '输入你的犇犇'></input>&ensp;&ensp;&ensp;<button onclick = 'simple()' id = 'pres'>发送</button></span>
         </div>
         <script>
             function apt(tin,wm){
@@ -151,7 +151,7 @@
 						pt('update','speak_upel','0');
 						up = 0;
 					}
-					if (cnd < 50){
+					if (cnd < 20){
 						cnd++;
 						pt('update','speak_counter',String(cnd));
 					}
@@ -165,6 +165,17 @@
 				else{
 					alert('请先登录！');
 				}
+			}
+			document.getElementById('cinn').disabled = true;
+			document.getElementById('cinn').placeholder = '加载中……';
+			document.getElementById('pres').disabled = true;
+			if (window.localStorage.getItem('nowname') !== '未登录' && window.localStorage.getItem('nowname') !== 'null')
+				document.getElementById('cinn').disabled = false;
+				document.getElementById('cinn').placeholder = '输入你的犇犇，然后发送。';
+				document.getElementById('pres').disabled = false;
+			}
+			else{
+				document.getElementById('cinn').placeholder = '请先登录再发犇犇！';
 			}
 			dob();
         </script>
