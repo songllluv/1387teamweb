@@ -169,7 +169,7 @@
 			document.getElementById('cinn').disabled = true;
 			document.getElementById('cinn').placeholder = '加载中……';
 			document.getElementById('pres').disabled = true;
-			if (window.localStorage.getItem('nowname') !== '未登录' && window.localStorage.getItem('nowname') !== 'null')
+			if (window.localStorage.getItem('nowname') !== '未登录' && window.localStorage.getItem('nowname') !== 'null'){
 				document.getElementById('cinn').disabled = false;
 				document.getElementById('cinn').placeholder = '输入你的犇犇，然后发送。';
 				document.getElementById('pres').disabled = false;
