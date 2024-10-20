@@ -51,7 +51,7 @@
         <br>
         <div class = "backgroundiv">
             <h2>登录</h2>
-            <input type = 'input' id = 'name' placeholder = '昵称'></input>
+            <input type="text" onkeyup="this.value=this.value.replace(/^[^!@#$%^&*()-=+]/g,'')" type = 'input' id = 'name' placeholder = '昵称'></input>
             <br>
             <br>
             <input onKeyUp="value=value.replace(/[\W]/g,'')" type = 'input' id = 'pass' placeholder = '密码'></input>
