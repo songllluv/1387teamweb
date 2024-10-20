@@ -54,7 +54,7 @@
             <input type = 'input' id = 'name' placeholder = '昵称'></input>
             <br>
             <br>
-            <input type = 'input' id = 'pass' placeholder = '密码'></input>
+            <input onKeyUp="value=value.replace(/[\W]/g,'')" type = 'input' id = 'pass' placeholder = '密码'></input>
             <br>
             <br>
             <button onclick = 'bus();'>登录</button>&ensp;&ensp;&ensp;<a href = 'https://name317.github.io/1387teamweb/lange'>没有账号？去注册</a>
