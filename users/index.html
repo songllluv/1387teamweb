@@ -28,7 +28,7 @@
         </div>
         <br>
         <div class = "backgroundiv">
-            <div>
+            <div class = "backgroundiv" id = "usel">
                 <h2>---用户名---</h2>
                 <h2>---本人ID---</h2>
                 <h2>---个人简介---</h2>
@@ -37,7 +37,7 @@
         <script>
             function showe{
                 var user = url.searchParams.get('user');
-                document.getElementById('myDiv').innerHTML = '这是更新后的内容。';
+                document.getElementById('usel').innerHTML = '这是更新后的内容。';
             }
           
             document.getElementById('blogin').disabled = true;
