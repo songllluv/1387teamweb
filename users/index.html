@@ -100,7 +100,12 @@
 				window.location.href = 'https://name317.github.io/1387teamweb/';
             }
             function showe{
-                var user = url.searchParams.get('user');
+                var user = url.searchParams.get('username');
+				var d1 = JSON.parse(pt('get',user + '_id'));
+				var d2 = d1[user + '_id'];
+				if (d2){
+					
+				}
                 document.getElementById('usel').innerHTML = '<h2>' +  + '</h2>' + '<h2>' +  + '</h2>' + '<h2>' +  + '</h2>';
             }
         </script>
