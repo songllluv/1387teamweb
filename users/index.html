@@ -85,28 +85,28 @@
 				    return(xhr.statusText);
 				}
    			};
-            function bus(){
-                var nad = document.getElementById("name").value;
-                var dod = document.getElementById("pass").value;
-				var d1 = JSON.parse(pt('get',nad + '_password'));
-				var d2 = d1[nad + '_password'];
-				if (d2 == dod){
-					alert('登陆成功！');
-					window.localStorage.setItem('nowname',nad);
-				}
-				else{
-					alert('登陆失败！');
-				}
-				window.location.href = 'https://name317.github.io/1387teamweb/';
-            }
             function showe{
                 var user = url.searchParams.get('username');
 				var d1 = JSON.parse(pt('get',user + '_id'));
 				var d2 = d1[user + '_id'];
-				if (d2){
-					
+				var d3 = d1['status'];
+				if (d3 == 'success'){
+					var d4 = JSON.parse(pt('get',user + '_os'));
+					var d5 = d1[user + '_os'];
+					if (d5 == null){
+						pt('update',user + '_os',' ');
+						document.getElementById('usel').innerHTML = '<h2>' + user + '</h2>' + '<h2>' + d2 + '</h2>' + '<h2>' + '糟糕，出错了！ (⊙o⊙)' + '</h2>';
+					}
+					else if (d5 == ''){
+						document.getElementById('usel').innerHTML = '<h2>' + user + '</h2>' + '<h2>' + d2 + '</h2>' + '<h2>' + '这个人太懒了，没有个人简介。' + '</h2>';
+					}
+					else{
+						document.getElementById('usel').innerHTML = '<h2>' + user + '</h2>' + '<h2>' + d2 + '</h2>' + '<h2>' + d5 + '</h2>';
+					}
 				}
-                document.getElementById('usel').innerHTML = '<h2>' +  + '</h2>' + '<h2>' +  + '</h2>' + '<h2>' +  + '</h2>';
+				else{
+					document.getElementById('usel').innerHTML = '<h1>查无此人！</h1>';
+				}
             }
         </script>
     </body>
