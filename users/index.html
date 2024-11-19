@@ -90,8 +90,7 @@
                 var user = url.searchParams.get('username');
 				var d1 = JSON.parse(pt('get',user + '_id'));
 				var d2 = d1[user + '_id'];
-				var d3 = d1['status'];
-				if (d3 == 'success'){
+				if (d2 != null){
 					var d4 = JSON.parse(pt('get',user + '_os'));
 					var d5 = d1[user + '_os'];
 					if (d5 == null){
