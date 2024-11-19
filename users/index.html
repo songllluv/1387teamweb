@@ -86,6 +86,7 @@
 				}
    			}
             function showe(){
+				const url = new URL(window.location.href);
                 var user = url.searchParams.get('username');
 				var d1 = JSON.parse(pt('get',user + '_id'));
 				var d2 = d1[user + '_id'];
