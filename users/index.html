@@ -90,11 +90,11 @@
                 var user = url.searchParams.get('username');
 				var d1 = JSON.parse(pt('get',user + '_id'));
 				var d2 = d1[user + '_id'];
-				if (d2 != null){
+				if (d2 != 'null'){
 					var d4 = JSON.parse(pt('get',user + '_os'));
 					var d5 = d1[user + '_os'];
-					if (d5 == null){
-						pt('update',user + '_os',' ');
+					if (d5 == 'null'){
+						pt('update',user + '_os','这个人太懒了，没有个人简介。');
 						document.getElementById('usel').innerHTML = '<h2>' + user + '</h2>' + '<h2>' + d2 + '</h2>' + '<h2>' + '糟糕，出错了！ (⊙o⊙)' + '</h2>';
 					}
 					else if (d5 == ''){
