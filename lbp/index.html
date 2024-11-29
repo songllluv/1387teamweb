@@ -156,7 +156,7 @@
 						cnd++;
 						pt('update','speak_counter',String(cnd));
 					}
-					else{
+					else if (up >= (35 - 1)){
 						pt('delete','speak_thing_' + String(up - cnd));
 						pt('delete','speak_user_' + String(up - cnd));
 					}
