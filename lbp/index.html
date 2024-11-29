@@ -156,6 +156,9 @@
 						cnd++;
 						pt('update','speak_counter',String(cnd));
 					}
+					else{
+						pt('delete',String(up - cnd - 1));
+					}
 					up++;
 					pt('update','speak_upel',String(up));
 					pt('update','speak_user_' + String(up),window.localStorage.getItem('nowname'));
