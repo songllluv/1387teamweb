@@ -37,10 +37,19 @@
             <input id = 'nord' placeholder = '输入查找的用户名'>&ensp;&ensp;&ensp;<button onclick = 'medu()'>尝试跳转个人主页</button>
         </div>
         <script>
-        function medu(){
-            var cod = document.getElementById('nord').value;
-            console.log(cod);
-        }
+            function medu(){
+                var cod = document.getElementById('nord').value;
+                console.log(cod);
+                var d1 = JSON.parse(pt('get',user + '_id'));
+				var d2 = d1[user + '_id'];
+				if (d2 != 'null'){
+					alert('跳转中！^_^');
+                    window.location.href = "https://name317.github.io/1387teamweb/users/?username=" + cod;
+				}
+				else{
+					alert('查无此人！ (⊙o⊙)');
+				}
+            }
         </script>
         </div>
         <script>
