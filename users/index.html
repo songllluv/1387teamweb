@@ -93,7 +93,7 @@
 				if (d2 != 'null'){
 					var d4 = JSON.parse(pt('get',user + '_os'));
 					var d5 = d1[user + '_os'];
-					if (d5 === 'null' || d5 === 'undefined' || d5 == null){
+					if (d5 === 'null' || d5 === 'undefined'){
 						document.getElementById('usel').innerHTML = '<h1>糟糕，出错了！ (⊙o⊙)</h1> <h4>正在修复中……请不要关闭窗口</h4>';
 						pt('update',user + '_os','这个人太懒了，没有个人简介。');
 						setTimeout(function() {
