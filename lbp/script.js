@@ -77,7 +77,7 @@ function dob(){
 		var dd = dd0['speak_user_' + String(i)];
 		var d0 = JSON.parse(pt('get','speak_thing_' + String(i)));
 		var d = d0['speak_thing_' + String(i)];
-		app(dd + ' : ' + d);
+		app('<a href = "https://name317.github.io/1387teamweb/users/?username=' + dd + '>' + dd + </a> + ' : ' + d);
 		console.log(dd + ' ' + d);
 	}
 }
