@@ -73,7 +73,7 @@
             function medu(){
                 var cod = document.getElementById('nord').value;
                 console.log(cod);
-                var d1 = JSON.parse(pt('get',user + '_id'));
+                var d1 = JSON.parse(pt('get',cod + '_id'));
 				var d2 = d1[user + '_id'];
 				if (d2 != 'null'){
 					alert('跳转中！^_^');
