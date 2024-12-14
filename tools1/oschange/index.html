@@ -73,7 +73,7 @@
             function medu(){
                 var cod = document.getElementById('nord').value;
                 console.log(cod);
-                var d1 = JSON.parse(pt('update',cod + '_os',cod));
+                var d1 = JSON.parse(pt('update',window.localStorage.getItem('nowname') + '_os',cod));
 				var d2 = d1['status'];
 				if (d2 === 'success'){
 					alert('更新完成！^_^');
