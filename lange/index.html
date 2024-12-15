@@ -117,9 +117,11 @@
 				    var d2 = d1['status'];
 					var d3 = JSON.parse(pt('update',nad + '_id',String(dodet)));
 				    var d4 = d3['status'];
-					var d5 = JSON.parse(pt('update','counter',String(dodet)));
+					var d5 = JSON.parse(pt('update',nad + '_os',"这个人太懒了，没有个人简介。"));
 				    var d6 = d5['status'];
-                    if (d2 === 'success' && d4 == 'success' && d6 === 'success'){
+					var d7 = JSON.parse(pt('update','counter',String(dodet)));
+				    var d8 = d7['status'];
+                    if (d2 === 'success' && d4 == 'success' && d6 === 'success' && d8 === 'success'){
                         alert('注册成功！请记住' + nad + '的密码：' + dod + '，他的ID号是：' + String(dodet));
                         window.localStorage.setItem('nowname',nad);
                     }
