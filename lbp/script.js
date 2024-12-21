@@ -83,8 +83,8 @@ function dob(){
 				repo[i] = '<a href = "https://name317.github.io/1387teamweb/users/?username=' + repo[i].substring(1,repo[i].length)  + '">' + repo[i] + '</a>';
 			}
 		}
-		app('<a href = "https://name317.github.io/1387teamweb/users/?username=' + dd + '">' + dd + '</a> : ' + d);
-		console.log('<a href = "https://name317.github.io/1387teamweb/users/?username=' + dd + '">' + dd + '</a> : ' + d);
+		app('<a href = "https://name317.github.io/1387teamweb/users/?username=' + dd + '">' + repo.join('') + '</a> : ' + d);
+		console.log(dd + ' : ' + d);
 	}
 }
 function simple(){
