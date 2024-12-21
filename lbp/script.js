@@ -80,7 +80,7 @@ function dob(){
 		var repo = d.split(" ");
 		for (var i = 0;i < repo.length();i++){
 			if (repo[i][0] === '@'){
-				repo[i] = '<a href = "https://name317.github.io/1387teamweb/users/?username=' + .substring(1,repo[i].length())  + '">' + repo[i] + '</a>';
+				repo[i] = '<a href = "https://name317.github.io/1387teamweb/users/?username=' + repo[i].substring(1,repo[i].length())  + '">' + repo[i] + '</a>';
 			}
 		}
 		app('<a href = "https://name317.github.io/1387teamweb/users/?username=' + dd + '">' + dd + '</a> : ' + d);
