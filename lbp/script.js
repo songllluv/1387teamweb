@@ -77,6 +77,12 @@ function dob(){
 		var dd = dd0['speak_user_' + String(i)];
 		var d0 = JSON.parse(pt('get','speak_thing_' + String(i)));
 		var d = d0['speak_thing_' + String(i)];
+		var repo = d.split(" ");
+		for (int i = 0;i < repo.length();i++){
+			if (repo[i][0] === '@'){
+				repo[i] = '<a href = "https://name317.github.io/1387teamweb/users/?username=' + .substring(1,repo[i].length())  + '">' + repo[i] + '</a>';
+			}
+		}
 		app('<a href = "https://name317.github.io/1387teamweb/users/?username=' + dd + '">' + dd + '</a> : ' + d);
 		console.log('<a href = "https://name317.github.io/1387teamweb/users/?username=' + dd + '">' + dd + '</a> : ' + d);
 	}
