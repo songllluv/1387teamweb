@@ -25,6 +25,25 @@
 			  text-align: left
             }
         </style>
+	    <script>
+            document.getElementById('blogin').disabled = true;
+            document.getElementById('blange').disabled = true;
+            document.getElementById('tolo').disabled = true;
+            function dete(){
+                window.localStorage.setItem('nowname','null');
+                location.reload();
+            }
+            var dy = window.localStorage.getItem('nowname');
+            if (dy === 'null' || dy == null || dy == ''){
+                document.querySelector('strong.dename').textContent = '未登录';
+                document.getElementById('blogin').disabled = false;
+                document.getElementById('blange').disabled = false;
+            }
+            else{
+                document.querySelector('strong.dename').textContent = dy;
+                document.getElementById('tolo').disabled = false;
+            }
+        </script>
     </head>
     <body style="background-image: url('https://cdn.luogu.com.cn/upload/image_hosting/n958y1vp.png'); background-size: cover; background-repeat: no-repeat;">
         <input type = "button" value = "跳转回主页" onclick = "window.location.href='https://name317.github.io'">
@@ -44,24 +63,5 @@
 			      </div>
 		</center>
         </div>
-        <script>
-            document.getElementById('blogin').disabled = true;
-            document.getElementById('blange').disabled = true;
-            document.getElementById('tolo').disabled = true;
-            function dete(){
-                window.localStorage.setItem('nowname','null');
-                location.reload();
-            }
-            var dy = window.localStorage.getItem('nowname');
-            if (dy === 'null' || dy == null || dy == ''){
-                document.querySelector('strong.dename').textContent = '未登录';
-                document.getElementById('blogin').disabled = false;
-                document.getElementById('blange').disabled = false;
-            }
-            else{
-                document.querySelector('strong.dename').textContent = dy;
-                document.getElementById('tolo').disabled = false;
-            }
-        </script>
     </body>
 </html>
