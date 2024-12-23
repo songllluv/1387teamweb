@@ -1,0 +1,85 @@
+<html>
+    <head> 
+        <meta charset = "UTF-8">
+        <title>1387网</title>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests;">
+        <link href="favicon.ico" rel="icon">
+        <style>
+            .backgroundiv {
+              background-color: #3498db;
+              color: white;
+              padding: 20px;
+              border: 2px solid #2980b9;
+              margin: 20px;
+              text-align: center;
+            }
+            a{
+              text-decoration: none;
+            }
+            .divdiv{
+              background-color: #ffffff;
+              color: black;
+              padding: 5px;
+              border: 2px solid black;
+              margin: 5px;
+			  text-align: left
+            }
+        </style>
+    </head>
+    <body style="background-image: url('https://cdn.luogu.com.cn/upload/image_hosting/n958y1vp.png'); background-size: cover; background-repeat: no-repeat;">
+        <input type = "button" value = "跳转回主页" onclick = "window.location.href='https://name317.github.io'">
+        <hr>
+        <div class = "backgroundiv">
+            <h1>这里是 1387网</h1>
+            <strong class = 'dename'>User Name Loading......</strong>&ensp;&ensp;&ensp;<button onclick = 'window.location.href = "https://name317.github.io/1387teamweb/login";' id = 'blogin'>登录</button>&ensp;&ensp;&ensp;<button onclick = 'window.location.href = "https://name317.github.io/1387teamweb/lange";' id = blange>注册</button>&ensp;&ensp;&ensp;<button onclick = 'dete();' id = 'tolo'>退登</button>&ensp;&ensp;&ensp;&ensp;&ensp;|&ensp;&ensp;&ensp;&ensp;&ensp;<button onclick = 'window.location.href = "https://name317.github.io/1387teamweb";'>团队主页</button>&ensp;&ensp;&ensp;<button onclick = 'window.location.href = "https://name317.github.io/1387teamweb/young";'>young社的事</button>&ensp;&ensp;&ensp;<button onclick = 'window.location.href = "https://name317.github.io/1387teamweb/1387";'>1387的事</button>&ensp;&ensp;&ensp;<button onclick = 'window.location.href = "https://name317.github.io/1387teamweb/cal";'>公告</button>&ensp;&ensp;&ensp;<button onclick = 'window.location.href = "https://name317.github.io/1387teamweb/lbp";'>犇犇</button>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;相关链接&ensp;|&ensp;<button onclick = 'window.open("https://www.luogu.com.cn/team/74385")'>1387洛谷社（young）</button>&ensp;&ensp;&ensp;<button onclick = 'window.open("https://www.40code.com/#page=studio&id=535")'>1387 40code社</button>&ensp;&ensp;&ensp;<button onclick = 'window.open("https://www.ccw.site/topic/1387%E7%A4%BECCW%E5%88%86%E7%A4%BE")'>1387共创世界社</button>&ensp;
+            <hr>
+        </div>
+        <br>
+        <div class = "backgroundiv">
+            <h2>Emoji OS:Make a app</h2>
+            <hr>
+			<center><span><a href = "https://www.40code.com/#page=work&id=11897">第一网址试玩</a></span></center>
+			<div class = "divdiv">
+        应用制作指南： 打开应用制作 制作应用，拓展名改成eoa，到应用市场输入“4”上传
+        <hr>
+在edge浏览器使用手势的时候按右键移动鼠标会触发手势，导致右键鼠标样式不会恢复成正常鼠标 密码是（不要输入直接确定）
+        <hr>
+命令打开方式 双指触摸屏幕或按<code>↑↑↓↓←→←→</code> 命令集 <code>notsafe</code> 关闭密码不安全弹窗 <code>delete index.sb3</code> 奇妙的效果 <code>stop</code> 调试用
+        <hr>
+按下-或😀有惊喜
+        <hr>
+按Q键切换壁纸
+        <br>
+按A键切换时间🕑表示方式
+        <hr>
+↑↓→←操控鼠标
+        <hr>
+J键点鼠标🖱左键K键点鼠标🖱中键L键点鼠标🖱右键
+        <hr>
+网站中老版本https://wumingshiali.github.io/Emoji-OS-html-version/
+        <br>
+GitHub https://github.com/wumingshiali/Emoji-OS-html-version
+			</div>
+        </div>
+        </div>
+        <script>
+            document.getElementById('blogin').disabled = true;
+            document.getElementById('blange').disabled = true;
+            document.getElementById('tolo').disabled = true;
+            function dete(){
+                window.localStorage.setItem('nowname','null');
+                location.reload();
+            }
+            var dy = window.localStorage.getItem('nowname');
+            if (dy === 'null' || dy == null || dy == ''){
+                document.querySelector('strong.dename').textContent = '未登录';
+                document.getElementById('blogin').disabled = false;
+                document.getElementById('blange').disabled = false;
+            }
+            else{
+                document.querySelector('strong.dename').textContent = dy;
+                document.getElementById('tolo').disabled = false;
+            }
+        </script>
+    </body>
+</html>
