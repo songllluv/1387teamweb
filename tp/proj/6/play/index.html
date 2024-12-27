@@ -1,1 +1,67 @@
-
+<html>
+    <head> 
+        <meta charset = "UTF-8">
+        <title>1387网</title>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests;">
+        <link href="favicon.ico" rel="icon">
+        <style>
+            .backgroundiv {
+              background-color: #3498db;
+              color: white;
+              padding: 20px;
+              border: 2px solid #2980b9;
+              margin: 20px;
+              text-align: center;
+            }
+            a{
+              text-decoration: none;
+            }
+            .divdiv{
+              background-color: #ffffff;
+              color: black;
+              padding: 5px;
+              border: 2px solid black;
+              margin: 5px;
+			  text-align: left
+            }
+        </style>
+	    <script>
+            document.getElementById('blogin').disabled = true;
+            document.getElementById('blange').disabled = true;
+            document.getElementById('tolo').disabled = true;
+            function dete(){
+                window.localStorage.setItem('nowname','null');
+                location.reload();
+            }
+            var dy = window.localStorage.getItem('nowname');
+            if (dy === 'null' || dy == null || dy == ''){
+                document.querySelector('strong.dename').textContent = '未登录';
+                document.getElementById('blogin').disabled = false;
+                document.getElementById('blange').disabled = false;
+            }
+            else{
+                document.querySelector('strong.dename').textContent = dy;
+                document.getElementById('tolo').disabled = false;
+            }
+        </script>
+    </head>
+    <body style="background-image: url('https://cdn.luogu.com.cn/upload/image_hosting/n958y1vp.png'); background-size: cover; background-repeat: no-repeat;">
+        <input type = "button" value = "跳转回主页" onclick = "window.location.href='https://name317.github.io'">
+        <hr>
+        <div class = "backgroundiv">
+            <h1>这里是 1387网</h1>
+            <strong class = 'dename'>User Name Loading......</strong>&ensp;&ensp;&ensp;<button onclick = 'window.location.href = "https://name317.github.io/1387teamweb/login";' id = 'blogin'>登录</button>&ensp;&ensp;&ensp;<button onclick = 'window.location.href = "https://name317.github.io/1387teamweb/lange";' id = blange>注册</button>&ensp;&ensp;&ensp;<button onclick = 'dete();' id = 'tolo'>退登</button>&ensp;&ensp;&ensp;&ensp;&ensp;|&ensp;&ensp;&ensp;&ensp;&ensp;<button onclick = 'window.location.href = "https://name317.github.io/1387teamweb";'>团队主页</button>&ensp;&ensp;&ensp;<button onclick = 'window.location.href = "https://name317.github.io/1387teamweb/young";'>young社的事</button>&ensp;&ensp;&ensp;<button onclick = 'window.location.href = "https://name317.github.io/1387teamweb/1387";'>1387的事</button>&ensp;&ensp;&ensp;<button onclick = 'window.location.href = "https://name317.github.io/1387teamweb/cal";'>公告</button>&ensp;&ensp;&ensp;<button onclick = 'window.location.href = "https://name317.github.io/1387teamweb/lbp";'>犇犇</button>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;相关链接&ensp;|&ensp;<button onclick = 'window.open("https://www.luogu.com.cn/team/74385")'>1387洛谷社（young）</button>&ensp;&ensp;&ensp;<button onclick = 'window.open("https://www.40code.com/#page=studio&id=535")'>1387 40code社</button>&ensp;&ensp;&ensp;<button onclick = 'window.open("https://www.ccw.site/topic/1387%E7%A4%BECCW%E5%88%86%E7%A4%BE")'>1387共创世界社</button>&ensp;
+            <hr>
+        </div>
+        <br>
+        <div class = "backgroundiv">
+            <h2>鼠标闯关2</h2>
+            <hr>
+            <div class = "divdiv">
+		    <center>
+                <iframe width="600px" height="400px" src="https://www.ccw.site/embed?id=65cd83a54c0ef9459ea067a6&type=player" title="鼠标闯关2 - 317 - 共创世界(ccw.site) - Scratch、游戏、动画、漫画、小说、编程创作社区" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen scrolling="no"></iframe>
+			      </div>
+		</center>
+        </div>
+    </body>
+</html>
